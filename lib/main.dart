@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     GetRespones(context);
   }
@@ -170,7 +170,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 3.0),
+              padding: const EdgeInsets.only(top:50.0),
               child: Container(
                 width: double.infinity,
                 height: 50.0,
@@ -299,21 +299,33 @@ class MyItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              currency[position].title!,
-              style: TextStyle(fontFamily: 'iransans', color: Colors.black),
+            SizedBox(
+              width: 70,
+              child: Text(
+                currency[position].title!,
+                style: TextStyle(fontFamily: 'iransans', color: Colors.black),
+              ),
             ),
-            Text(
-              getfarsinumber(currency[position].price.toString()),
-              style: TextStyle(fontFamily: 'regular', color: Colors.black),
+            SizedBox(
+              width:70,
+             
+              child: Center(
+                child: Text(
+                  getfarsinumber(currency[position].price.toString()),
+                  style: TextStyle(fontFamily: 'regular', color: Colors.black),
+                ),
+              ),
             ),
-            Text(
-              getfarsinumber(currency[position].changes.toString()),
-              style: TextStyle(
-                  fontFamily: 'iransans',
-                  color: currency[position].status == "n"
-                      ? Colors.red
-                      : Colors.green),
+            SizedBox(
+              width: 50,
+              child: Text(
+                getfarsinumber(currency[position].changes.toString()),
+                style: TextStyle(
+                    fontFamily: 'iransans',
+                    color: currency[position].status == "n"
+                        ? Colors.red
+                        : Colors.green),
+              ),
             ),
           ],
         ),

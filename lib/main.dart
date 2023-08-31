@@ -165,12 +165,13 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.only(top: 6.0, bottom: 6.0),
               child: Container(
                 width: double.infinity,
-                height: height * 0.4,
+                height: height * 0.47
+                ,
                 child: FutureBuilderMethod(context),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:50.0),
+              padding: const EdgeInsets.only(top:10.0),
               child: Container(
                 width: double.infinity,
                 height: 50.0,
